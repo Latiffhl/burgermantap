@@ -9,7 +9,7 @@
 }
 
 :root {
-  --main-color: #862a30;
+  --main-color: #ff6a00;
   --text-color: #fff;
   --bg-color: #1e1c2a;
   --big-font: 5rem;
@@ -36,25 +36,31 @@ header {
   padding: 30px 170px;
   background: var(--bg-color);
 }
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
 .logo {
   color: var(--main-color);
   font-weight: 600;
   font-size: 2.4rem;
+  display: flex;
+  align-items: center;
 }
 .navbar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100vh;
   display: flex;
-  flex-direction: column;
+  position: relative; /* Change from fixed */
+  right: 0;
+  width: auto; /* Change from 300px */
+  height: auto; /* Change from 100vh */
+  flex-direction: row; /* Change from column */
   align-items: center;
-  justify-content: flex-start;
-  padding-top: 80px;
-  background: #2b2640;
+  padding-top: 0; /* Remove padding */
+  background: transparent; /* Remove background */
   transition: 0.3s ease-in-out;
-  z-index: 1000; /* Lower than menu icon */
+  z-index: 1000;
 }
 .navbar.active {
   right: 0;
@@ -308,6 +314,7 @@ section {
   font-size: 1.5rem;
   border-radius: 100px;
   transition: 0.4s;
+  text-decoration: none;
 }
 .col .social a:hover {
   transform: scale(1.2);
@@ -339,7 +346,6 @@ section {
     width: 300px;
     height: 100vh;
     background: #2b2640;
-    z-index: 1000; /* Lower than menu icon */
     display: flex;
     flex-direction: column;
     align-items: center;
